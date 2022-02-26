@@ -38,3 +38,9 @@ export class User{
         return this._token
     }
 }
+
+export interface cities {
+    id: number,
+    name: string,
+    governate: string
+}

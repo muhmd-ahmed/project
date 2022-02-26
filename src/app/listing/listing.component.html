@@ -37,9 +37,9 @@
             <div class="col-lg-2 col-xl-2 no-sm-border border-right">
               <div class="wrap-icon">
                 <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
-               <select class="form-control" name="state" id="">
-                  <option value="">locations </option>
-                  <option value=""></option>
+               <select class="form-control" name="state" id="" >
+                  <!-- <option  value="">locations </option> -->
+                  <option *ngFor ="let city of gov" [value]="city.governate" (click)="choosegov(city.governate)">{{city.name}}</option>
                   
                 </select>
               </div>
@@ -49,8 +49,8 @@
               <div class="select-wrap">
                 <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
                 <select class="form-control" name="state" id="">
-                  <option value="">All States</option>
-                  <option value=""></option>
+                  <!-- <option value="">All States</option> -->
+                  <option *ngFor ="let ciry of cities" [value]="city.name" (click)="choosegov(city.name)">{{city.governate}}</option>
                   
                 </select>
               </div>
